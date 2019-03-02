@@ -1,11 +1,17 @@
 # Import libraries
 from imutils.video import VideoStream
+import os
 import numpy as np
 import imutils
 import cv2
 
+# Define paths
+base_dir = os.path.join( os.path.dirname( __file__ ), '../' )
+prototxt_path = os.path.join(base_dir + 'model_data/deploy.prototxt')
+caffemodel_path = os.path.join(base_dir + 'model_data/weights.caffemodel')
+
 # Read the model
-model = cv2.dnn.readNetFromCaffe('deploy.prototxt', 'weights.caffemodel')
+model = cv2.dnn.readNetFromCaffe(prototxt_path, caffemodel_path)
 
 # Start video capture
 vs = cv2.VideoCapture(0)
