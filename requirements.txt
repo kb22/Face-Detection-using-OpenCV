@@ -1,3 +1,4 @@
-imutils==0.5.2
-numpy==1.16.2
-opencv-python==4.0.0.21
+certifi==2020.4.5.1
+imutils==0.5.3
+numpy==1.18.4
+opencv-python==4.2.0.34
